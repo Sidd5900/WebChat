@@ -1,3 +1,4 @@
+require("dotenv").config();
 const express = require("express");
 const path = require("path");
 const http = require("http");
@@ -21,8 +22,7 @@ const botName = "Chatbot";
 const PORT = 3000 || process.env.PORT;
 
 //connect to database and then server starts listening
-const dbURI =
-  "mongodb+srv://anony:ynona@cluster0.rqcrh.mongodb.net/chatsdb?retryWrites=true&w=majority";
+const dbURI = process.env.dbURI;
 
 mongoose
   .connect(dbURI, { useNewUrlParser: true, useUnifiedTopology: true })
