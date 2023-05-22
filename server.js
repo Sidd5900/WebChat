@@ -19,7 +19,7 @@ const server = http.createServer(app);
 const io = socketio(server);
 const botName = "Chatbot";
 
-const PORT = 3000 || process.env.PORT;
+const PORT = process.env.PORT || 3000;
 
 //connect to database and then server starts listening
 const dbURI = process.env.dbURI;
